@@ -6,7 +6,6 @@
       "author": "typicode"
     }
   ],
-
   "comments": [
     {
       "id": 1,
@@ -14,9 +13,9 @@
       "postId": 1
     }
   ],
-
-  "profile": { "name": "typicode" },
-
+  "profile": {
+    "name": "typicode"
+  },
   "signup": [
     {
       "name": "Ronaldo",
@@ -24,6 +23,13 @@
       "mobile": 1654654654,
       "password": "test",
       "id": 1
+    },
+    {
+      "name": "Hermann Manuel",
+      "emailId": "dem7527@s57272koia.ch",
+      "mobileNumber": 78575278,
+      "password": "demodemo7572",
+      "id": 2
     }
   ]
 }
