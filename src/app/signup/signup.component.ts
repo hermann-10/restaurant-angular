@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  myForm!: FormGroup;
+  registerForm!: FormGroup;
 
   constructor(
     private fb: FormBuilder,
@@ -18,9 +18,9 @@ export class SignupComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.myForm = this.fb.group({
+    this.registerForm = this.fb.group({
       name: ['', Validators.required],
-      emailId: ['', Validators.required],
+      email: ['', Validators.required],
       mobileNumber: ['', Validators.required],
       password: ['', Validators.required],
     });
@@ -28,11 +28,11 @@ export class SignupComponent implements OnInit {
 
   signup() {
     this.http
-      .post<any>('http://localhost:3000/signup', this.myForm.value)
+      .post<any>('http://localhost:3000/signup', this.registerForm.value)
       .subscribe(
         (res) => {
           alert('You are register successfully !');
-          this.myForm.reset(); //Empty the form after submission
+          this.registerForm.reset(); //Empty the form after submission
           this.router.navigate(['login']);
         },
         (error) => {
