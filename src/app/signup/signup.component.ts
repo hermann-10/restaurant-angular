@@ -39,5 +39,18 @@ export class SignupComponent implements OnInit {
           alert('Something went wront!!!');
         }
       );
+
+      // this.http
+      //   .post<any>('http://localhost:3000/posts', this.registerForm.value)
+      //   .subscribe(
+      //     (res) => {
+      //       alert('You are register successfully !');
+      //       this.registerForm.reset(); //Empty the form after submission
+      //       this.router.navigate(['login']);
+      //     },
+      //     (error) => {
+      //       alert('Something went wront!!!');
+      //     }
+      //   );
   }
 }

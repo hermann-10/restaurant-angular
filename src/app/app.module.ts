@@ -15,7 +15,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { NgToastModule } from 'ng-angular-popup';
+import { RestaurantComponent } from './restaurant/restaurant.component';
 
 
 
@@ -27,6 +28,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MaterialComponent,
     SignupComponent,
     DashboardComponent,
+    RestaurantComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatInputModule,
     MatIconModule,
     MatFormFieldModule,
+    NgToastModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

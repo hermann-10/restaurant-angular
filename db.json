@@ -1,9 +1,52 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id": 2,
+      "name": "Hermann Mfdgdfganuel",
+      "email": "hermann@hotmail.com",
+      "mobile": 123123123,
+      "address": "dffdgdfg",
+      "services": "asdasds"
+    },
+    {
+      "id": 3,
+      "name": "12345",
+      "email": "demo121@sekoia.ch",
+      "mobile": 123456,
+      "address": "dffdgdfg",
+      "services": "asdasds"
+    },
+    {
+      "name": "retret",
+      "email": "hermann.manuel@hotmail.co",
+      "mobile": 234234,
+      "address": "dffdgdfg",
+      "services": "fdgdfgd",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "sdfsdf",
+      "email": "sdfsdf@gmail.com",
+      "mobile": 2213213123,
+      "address": "aswedasdas",
+      "services": "asdasds"
+    },
+    {
+      "id": 6,
+      "name": "fghbfgh",
+      "email": "ewrwerw@gmail.com",
+      "mobile": 1232132,
+      "address": "SDFSDF",
+      "services": "sdfsfd"
+    },
+    {
+      "id": 7,
+      "name": "Hermann Manuel",
+      "email": "hermann@hotmail.com",
+      "mobile": 791930361,
+      "address": "Chemin du 1Vi21212eux-Bur",
+      "services": "1212"
     }
   ],
   "comments": [
@@ -26,10 +69,66 @@
     },
     {
       "name": "Hermann Manuel",
-      "emailId": "dem7527@s57272koia.ch",
+      "email": "dem7527@s57272koia.ch",
       "mobileNumber": 78575278,
       "password": "demodemo7572",
       "id": 2
+    },
+    {
+      "name": "Hermann Manuel",
+      "email": "demo@sekoia.ch",
+      "mobileNumber": 545545,
+      "password": "demodemo",
+      "id": 3
+    },
+    {
+      "name": "test",
+      "email": "demo@sekoia.ch",
+      "mobileNumber": 1212121,
+      "password": "demodemo",
+      "id": 4
+    },
+    {
+      "name": "HM-Dev",
+      "email": "demo@hm-dev.ch",
+      "mobileNumber": 47845415454,
+      "password": "demodemo",
+      "id": 5
+    },
+    {
+      "name": "Demo-S",
+      "email": "demo@sekoia.ch",
+      "mobileNumber": 12154545,
+      "password": "demodemo",
+      "id": 6
+    },
+    {
+      "name": "",
+      "email": "demo@sekoia.ch",
+      "mobileNumber": "",
+      "password": "demodemo",
+      "id": 7
+    },
+    {
+      "name": "HM-20231",
+      "email": "demo@1234@sekoia.ch",
+      "mobileNumber": 12345678,
+      "password": "12345678",
+      "id": 8
+    },
+    {
+      "name": "Hermann Mfdgdfganuel",
+      "email": "hermann.manu123123123el@hotmail.com",
+      "mobileNumber": 123123123,
+      "password": "1231231231",
+      "id": 9
+    },
+    {
+      "name": "12345",
+      "email": "demo12123123@sekoia.ch",
+      "mobileNumber": 123456,
+      "password": "demodemo213123",
+      "id": 10
     }
   ]
 }

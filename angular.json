@@ -64,7 +64,7 @@
               "browserTarget": "ng-restaurant-2023:build:production"
             },
             "development": {
-              "browserTarget": "ng-restaurant-2023:build:development"
+              "browserTarget": "ng-restaurant-2023:build:development",
             }
           },
           "defaultConfiguration": "development"
