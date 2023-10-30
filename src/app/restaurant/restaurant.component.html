@@ -25,10 +25,18 @@
 
   <!-- Jumbotron Close -->
     <div class="form-outline">
-    <input type="text"style="width:20%;margin-left:72%"[(ngModel)]="userFilter.name"class="form-control"placeholder="Search Restaurant">
+    <input type="text" style="width:20%;margin-left:72%" [(ngModel)]="searchTerm.name" class="form-control" placeholder="Search Restaurant">
   </div>
 
+
+
   <!-- Searching Close -->
+
+   <ul>
+          
+          <!-- in case you want to show empty message -->
+          <!-- <li *ngIf="(allRestaurantData | searchFilterCustom: searchTerm).length === 0">No matching elements</li> -->
+        </ul>
 
   <!----Table-->
   <div class="table-responsive">
@@ -45,9 +53,11 @@
           </tr>
       </thead>
   <tbody>
-         <!-- <tr *ngFor="let data of allRestaurantData |filterBy:userFilter|paginate:{itemsPerPage:5,currentPage:page,totalItems:totalLength}">  -->
+        <!-- <tr *ngFor="let data of allRestaurantData | searchFilterCustom: searchTerm |paginate:{itemsPerPage:5,currentPage:page,totalItems:totalLength}">   -->
 
-     <tr *ngFor="let data of allRestaurantData"> 
+        <tr *ngFor="let data of allRestaurantData  |paginate:{itemsPerPage:5,currentPage:page,totalItems:totalLength}"> 
+
+ <!-- <tr *ngFor="let data of allRestaurantData"> -->
         
           <td>{{data.id}}</td>
           <td>{{data.name}}</td>
@@ -59,8 +69,9 @@
           <!-- <button data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="oneditresto(data)"  class="btn btn-info">Edit</button>
               &nbsp;&nbsp;<button   class="btn btn-danger"(click)="deleteResto(data)">Delete</button>   -->
 
-              <mat-icon data-bs-toggle="modal" data-bs-target="#exampleModal" color="primary"(click)="oneditresto(data)">edit</mat-icon>
-              &nbsp; <mat-icon color="warn"(click)="deleteResto(data)" >delete</mat-icon>
+              <mat-icon color="warn" routerLink="/details-restaurant/{{ data.id }}">Details</mat-icon>
+              <mat-icon data-bs-toggle="modal" data-bs-target="#exampleModal" color="primary"(click)="oneditresto(data)">Edit</mat-icon>
+              &nbsp; <mat-icon color="warn"(click)="deleteResto(data)" >Delete</mat-icon>
           </td>
       </tr>
   </tbody>
@@ -68,9 +79,9 @@
 
   </table>
      <!--pagination-->
-   <!-- <div class="pagination">
-    <pagination-controls (pageChange)="page=$event"></pagination-controls>
-   </div> -->
+    <div class="pagination">
+     <pagination-controls (pageChange)="page=$event"></pagination-controls> 
+   </div> 
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

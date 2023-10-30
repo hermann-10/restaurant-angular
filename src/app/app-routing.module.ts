@@ -6,6 +6,7 @@ import { MaterialComponent } from './material/material.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './share/auth.guard';
 import { RestaurantComponent } from './restaurant/restaurant.component';
+import { RestaurantDetailsComponent } from './restaurant/restaurant-details/restaurant-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -20,6 +21,11 @@ const routes: Routes = [
   {
     path: 'restaurant',
     component: RestaurantComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'details-restaurant/:id',
+    component: RestaurantDetailsComponent,
     canActivate: [AuthGuard],
   },
 

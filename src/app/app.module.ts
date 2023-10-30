@@ -19,6 +19,7 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FilterPipeModule } from 'ngx-filter-pipe';
+import { RestaurantDetailsComponent } from './restaurant/restaurant-details/restaurant-details.component';
 //import { SearchFilterCustomPipe } from './search-filter-custom.pipe';
 
 @NgModule({
@@ -45,6 +46,7 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
     SignupComponent,
     DashboardComponent,
     RestaurantComponent,
+    RestaurantDetailsComponent,
     //SearchFilterCustomPipe,
   ],
   providers: [],

@@ -10,22 +10,23 @@ import { NgToastService } from 'ng-angular-popup';
   styleUrls: ['./restaurant.component.css'],
 })
 export class RestaurantComponent implements OnInit {
-  userFilter: any = { name: '' };
-  totalLength: any;
+  searchTerm: any = { name: '' };
   page: number = 1;
-  formValue!: FormGroup;
+  totalLength: any;
   restaurentModelObj: RestaurantData = new RestaurantData();
+  formValue!: FormGroup;
   allRestaurantData: any;
+
   //button disabes add & update
   showadd!: boolean;
   showbtn!: boolean;
+
   constructor(
     private formbuilder: FormBuilder,
     private api: ApiService,
     private toast: NgToastService
   ) {}
   ngOnInit(): void {
-    //alert("hello welcome to Our page")
     this.formValue = this.formbuilder.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
@@ -35,6 +36,7 @@ export class RestaurantComponent implements OnInit {
     });
     this.getAlldata(); // to render on screen data
   }
+
   clickaddresto() {
     this.formValue.reset();
     this.showadd = true;
@@ -48,12 +50,13 @@ export class RestaurantComponent implements OnInit {
     this.restaurentModelObj.address = this.formValue.value.address;
     this.restaurentModelObj.services = this.formValue.value.services;
 
-    this.api.postRestaurant(this.restaurentModelObj).subscribe(res => {
+    this.api.postRestaurant(this.restaurentModelObj).subscribe(
+      (res) => {
         this.toast.success({
           detail: 'Update Message',
           summary: 'Record Added Sucessfully',
           duration: 4000,
-        })
+        });
         this.formValue.reset();
         this.getAlldata(); // when we create data before refresh it should render no need to refresh on adding
       },
@@ -98,7 +101,6 @@ export class RestaurantComponent implements OnInit {
   // update on edit
 
   updateRest() {
-    
     this.restaurentModelObj.name = this.formValue.value.name;
     this.restaurentModelObj.email = this.formValue.value.email;
     this.restaurentModelObj.mobile = this.formValue.value.mobile;
@@ -122,7 +124,6 @@ export class RestaurantComponent implements OnInit {
           alert('something went wrong!!!');
         }
       );
-  
   }
 
   logout() {

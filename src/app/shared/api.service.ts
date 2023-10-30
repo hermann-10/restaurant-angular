@@ -11,7 +11,7 @@ export class ApiService {
 
   //get all Data
   getAllRestaurant() {
-    return this.http.get<any>("http://localhost:3000/posts").pipe(
+    return this.http.get<any>('http://localhost:3000/posts').pipe(
       map((res: any) => {
         return res;
       })
@@ -19,7 +19,7 @@ export class ApiService {
   }
 
   //post data
-  postRestaurant(data:any) {
+  postRestaurant(data: any) {
     return this.http.post<any>('http://localhost:3000/posts', data).pipe(
       map((res: any) => {
         return res;
@@ -44,4 +44,19 @@ export class ApiService {
       })
     );
   }
+
+  // getRestaurantById(restaurantId: number): RestaurantData {
+  //   const restaurant:RestaurantData = this.restaurant.find(restaurant => restaurant.id === restaurantId
+  //   );
+  //   if (!restaurant) {
+  //     throw new Error('restaurant not found!');
+  //   } else {
+  //     return restaurant;
+  //   }
+  // }
+
+  find(id: number){
+    return this.http.get<any>('http://localhost:3000/posts/' + id);
+  }
 }
+
