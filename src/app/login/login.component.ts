@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
 
         if (user) {
 
-          alert('successfully logged in');
+  
           this.toast.success({ detail: 'Success Message', summary: ' User login Successfull', duration:9000});
           this.loginForm.reset();
           //this.router.navigate(['dashboard']);

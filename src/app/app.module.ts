@@ -15,21 +15,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { NgToastModule } from 'ng-angular-popup';
 import { RestaurantComponent } from './restaurant/restaurant.component';
-
-
-
+import { NgToastModule } from 'ng-angular-popup';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FilterPipeModule } from 'ngx-filter-pipe';
+//import { SearchFilterCustomPipe } from './search-filter-custom.pipe';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    MaterialComponent,
-    SignupComponent,
-    DashboardComponent,
-    RestaurantComponent,
-  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -43,8 +35,19 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
     MatIconModule,
     MatFormFieldModule,
     NgToastModule,
+    NgxPaginationModule,
+    //FilterPipeModule,
+  ],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    MaterialComponent,
+    SignupComponent,
+    DashboardComponent,
+    RestaurantComponent,
+    //SearchFilterCustomPipe,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
